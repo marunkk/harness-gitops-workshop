@@ -18,10 +18,10 @@ pipeline:
         spec:
           cloneCodebase: true
           platform:
-            os: Linux
+            os: Windows
             arch: Amd64
           runtime:
-            type: Cloud
+            type: Docker
             spec: {}
           execution:
             steps:
@@ -40,7 +40,7 @@ pipeline:
                     advanced:
                       log:
                         level: info
-                      fail_on_severity: none 
+                      fail_on_severity: none
               - step:
                   type: BuildAndPushDockerRegistry
                   name: BuildAndPushDockerRegistry
